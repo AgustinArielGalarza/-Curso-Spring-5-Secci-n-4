@@ -13,7 +13,7 @@ public class Factura {
 	private String descripcion;
 	@Autowired
 	private Cliente cliente;
-	
+	@Autowired
 	private List<ItemFactura> items;
 	
 	
