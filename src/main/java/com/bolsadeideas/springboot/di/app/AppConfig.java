@@ -37,4 +37,20 @@ public class AppConfig {
 		
 		return Arrays.asList(linea1, linea2);
 	}
+	
+	@Bean("itemsFacturaOficina")
+	@Primary												//solo funciona con Primary
+	public List<ItemFactura> registrarItemOficina(){
+		Producto producto1 = new Producto ("Monitor LG LCD 24'' ",2500);
+		Producto producto2 = new Producto ("Notebook Asus",5000);
+		Producto producto3 = new Producto ("Impresora HP Multifuncional",800);
+		Producto producto4 = new Producto ("Escritorio Oficina",3000);
+
+		ItemFactura linea1 = new ItemFactura(producto1, 2);
+		ItemFactura linea2 = new ItemFactura(producto2, 1);
+		ItemFactura linea3 = new ItemFactura(producto3, 1);
+		ItemFactura linea4 = new ItemFactura(producto4, 3);
+		
+		return Arrays.asList(linea1, linea2, linea3, linea4);
+	}
 }
